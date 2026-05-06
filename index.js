@@ -11,7 +11,9 @@ function findMaximum(a, b) {
 }
 
 function isPalindrome(word) {
-    return word === word.reverse();
+    const cleanedWord = word.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+    const reversedWord = cleanedWord.split('').reverse().join('');
+    return cleanedWord === reversedWord;
 }
 
 function calculateDiscountedPrice(originalPrice, discountPercentage) {
